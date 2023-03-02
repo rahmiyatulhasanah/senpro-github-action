@@ -43,14 +43,14 @@ deploy:
           eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/senpro-ssh-4
           echo "Cek folder project";
-          [ ! -d "${HOME}/senpro/460561/modul02/senpro-github-action/"] &&
+          [ ! -d "${HOME}/senpro/460561/modul02/senpro-github-action/" ] &&
             {
               echo "Repository belum di-clone. Cloning...";
               mkdir -p ~/senpro/460561/modul02;
               cd ~/senpro/460561/modul02;
               git clone https://github.com/rahmiyatulhasanah/senpro-github-action;
-              cd ~/senpro/460561/460561/modul02/senpro-github-action;
-              echo"Install Package dan Build Project";
+              cd ~/senpro/460561/modul02/senpro-github-action;
+              echo "Install Package dan Build Project";
               npm install;
               npm run build;
             } ||
